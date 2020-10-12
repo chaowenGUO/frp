@@ -1,4 +1,4 @@
 FROM python:latest
 COPY frps frps.ini /usr/local/src/
 WORKDIR /usr/local/src/
-ENTRYPOINT ["frps", "-c", "frps.ini"]
+ENTRYPOINT ["./frps", "-c", "frps.ini"]
