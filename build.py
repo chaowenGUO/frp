@@ -5,7 +5,9 @@ async def f():
             with io.BytesIO(await response.content.read()) as _:
                 def f(tar):
                     for _ in tar.getmembers():
-                        if pathlib.Path(_.name).name == 'frps': yield _
+                        if pathlib.Path(_.name).name == 'frps':
+                            _.name = 'frps'
+                            yield _
                 with tarfile.open(mode='r:gz', fileobj=_) as tar: tar.extractall(members=f(tar))
     
 asyncio.run(f())
