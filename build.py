@@ -1,7 +1,7 @@
 import aiohttp, asyncio, io, tarfile, pathlib, itertools, git, shutil
 async def f():
     async with aiohttp.ClientSession() as session:
-        async with session.get('https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.bz2') as response:
+        async with session.get('https://github.com/fatedier/frp/releases/download/v0.34.1/frp_0.34.1_linux_amd64.tar.gz') as response:
             with io.BytesIO(await response.content.read()) as _:
                 def f(tar):
                     for _ in tar.getmembers():
