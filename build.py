@@ -9,7 +9,7 @@ async def f():
                 #        if len(parts) > 2 and parts[1] == 'boost':
                 #            _.name = '/'.join(('include', *itertools.islice(parts, 1, None)))
                 #            yield _
-                with tarfile.open(mode='r:gz', fileobj=_) as tar: print(tar.getmembers())#tar.extractall(members=f(tar))
+                with tarfile.open(mode='r:gz', fileobj=_) as tar: print([_.name for _ in tar.getmembers()])#tar.extractall(members=f(tar))
     
 asyncio.run(f())
 
