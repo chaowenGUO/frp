@@ -1,3 +1,3 @@
 FROM bash:latest
 COPY frps /usr/local/bin/
-CMD ["bash", "-c", "frps -p $PORT"]
+CMD ["bash", "-c", "frps -p $PORT --dashboard_port 9000"]
