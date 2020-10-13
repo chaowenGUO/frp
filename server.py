@@ -6,5 +6,5 @@ async def post(request):
     return web.Response(text='fuck you')
 
 app = web.Application()
-app.add_routes([web.post('/ajax', post)])
+app.add_routes([web.post('/', post)])
 web.run_app(app, port=os.getenv('PORT'))
