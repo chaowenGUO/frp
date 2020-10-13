@@ -2,7 +2,8 @@ from aiohttp import web
 import os
 
 async def post(request):
-    return web.Response(text=str(request.transport.get_extra_info('peername')))
+    print(request.transport.get_extra_info('peername'))
+    return web.Response(text='')
 
 app = web.Application()
 app.add_routes([web.post('/', post)])
