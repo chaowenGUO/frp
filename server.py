@@ -2,8 +2,7 @@ from aiohttp import web
 import os
 
 async def post(request):
-    print(request.host)
-    return web.Response(text='fuck you')
+    return web.Response(text=str(request.transport.get_extra_info('peername')))
 
 app = web.Application()
 app.add_routes([web.post('/', post)])
