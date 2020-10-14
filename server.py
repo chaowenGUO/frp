@@ -2,7 +2,7 @@ from aiohttp import web
 import os
 
 async def post(request):
-    return web.Response(text=str(request.forwarded))
+    return web.Response(text=str(request.headers))
 
 app = web.Application()
 app.add_routes([web.post('/', post)])
