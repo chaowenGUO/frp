@@ -10,6 +10,6 @@ jobs:
         - run: |
              sudo apt-get install miredo
              chmod +x frpc
-             ./frpc tcp -s [2a02:180:6:1::3142] -l 8080 -r 6000 &
+             ./frpc tcp -s ’[2a02:180:6:1::3142]‘ -l 8080 -r 6000 &
              pip install aiohttp
              python main.py
