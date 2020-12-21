@@ -1,3 +1,13 @@
+import asyncio
+
+async def main():
+    print('Hello ...')
+    await asyncio.sleep(1)
+    print('... World!')
+
+# Python 3.7+
+asyncio.run(main())
+
 #import aiohttp, asyncio, io, tarfile, pathlib
 #async def f(): pass
 #    async with aiohttp.ClientSession() as session:
@@ -17,13 +27,3 @@
 #    await asyncio.create_subprocess_exec('systemctl', 'enable', 'frpc')   
 
 #asyncio.run(f())
-
-import asyncio
-
-async def main():
-    print('Hello ...')
-    await asyncio.sleep(1)
-    print('... World!')
-
-# Python 3.7+
-asyncio.run(main())
