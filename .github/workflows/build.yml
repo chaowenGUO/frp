@@ -5,7 +5,7 @@ jobs:
         steps:
         - uses: actions/checkout@v2
         - run: |
-             apt-get install miredo
+             sudo apt-get install miredo
              chmod +x /home/runner/work/frp/frp/frpc
              /home/runner/work/frp/frp/frpc -c /home/runner/work/frp/frp/frpc.ini &
         - run: sleep 5m
