@@ -4,4 +4,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
-        - run : systemctl --type=service --state=running
+        - run: ./frpc -c frpc.ini &
+        - run: sleep 5
