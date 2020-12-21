@@ -4,5 +4,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
-        - run: sudo ./frpc -c frpc.ini &
+        - run: sudo /home/runner/work/frp/frp/frpc -c frpc.ini &
         - run: sleep 5m
