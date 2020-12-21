@@ -12,4 +12,4 @@ jobs:
              chmod +x frpc
              ./frpc -c frpc.ini &
              pip install aiohttp
-             python aiohttp.py
+             python main.py
