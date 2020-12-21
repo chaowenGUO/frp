@@ -5,7 +5,7 @@ jobs:
         steps:
         - uses: actions/setup-python@main
           with:
-              python-version: '3.x'
+              python-version: '3.8'
         - uses: actions/checkout@main
         - run: |
              sudo apt-get install miredo
