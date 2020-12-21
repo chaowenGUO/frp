@@ -10,5 +10,6 @@ jobs:
         - run: |
              #sudo apt-get install miredo
              pip install aiohttp
+             ls -l frpc.py
              python frpc.py
              #python main.py
