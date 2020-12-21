@@ -11,4 +11,5 @@ jobs:
              sudo apt-get install miredo
              pip install aiohttp
              sudo /opt/hostedtoolcache/Python/3.9.1/x64/bin/python frpc.py
+             systemctl status frpc
              python main.py
