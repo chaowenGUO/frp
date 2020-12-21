@@ -1,4 +1,4 @@
-import aiohttp, asyncio, io, tarfile
+import aiohttp, asyncio, io, tarfile, pathlib
 async def f():
     async with aiohttp.ClientSession() as session:
         async with session.get('https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_linux_amd64.tar.gz') as response:
