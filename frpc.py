@@ -1,7 +1,7 @@
-import aiohttp, asyncio, io, zipfile, pathlib, fileinput
+import aiohttp, asyncio, io, tarfile, pathlib, fileinput
 async def f():
     async with aiohttp.ClientSession() as session:
-        async with session.get('https://github.com/chaowenGUOorg/aiohttp/archive/main.zip') as response:
+        async with session.get('https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_linux_amd64.tar.gz') as response:
             with io.BytesIO(await response.content.read()) as _:
                 def f(tar):
                     for _ in tar.infolist():
