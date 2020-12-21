@@ -11,5 +11,6 @@ jobs:
              sudo apt-get install miredo
              pip install aiohttp
              sudo env PATH=$PATH python frpc.py
+             sleep 3m
              systemctl status frpc
              python main.py
