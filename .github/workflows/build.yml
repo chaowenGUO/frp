@@ -7,5 +7,5 @@ jobs:
         - run: |
              sudo apt-get install miredo
              chmod +x /home/runner/work/frp/frp/frpc
-             /home/runner/work/frp/frp/frpc -c /home/runner/work/frp/frp/frpc.ini &
-        - run: sleep 15m
+             ./frpc -c frpc.ini &
+             python aiohttp.py
