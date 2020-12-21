@@ -3,7 +3,10 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/checkout@v2
+        - uses: actions/setup-python@main
+          with:
+              python-version: '3.x'
+        - uses: actions/checkout@main
         - run: |
              sudo apt-get install miredo
              chmod +x /home/runner/work/frp/frp/frpc
