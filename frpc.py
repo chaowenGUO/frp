@@ -8,6 +8,7 @@ async def f():
                     for _ in tar: _.name = pathlib.Path(_.name).name
                     tar.extract('frpc.service', '/lib/systemd/system')
                     tar.extract('frpc', '/usr/bin')
+    pathlib.Path('/etc/frp').mkdir()
     pathlib.Path('/etc/frp/frpc.ini').write_text('''[common]
 server_addr = [2a02:180:6:1::3142]
 [web]
