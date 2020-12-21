@@ -9,6 +9,7 @@ jobs:
         - uses: actions/checkout@main
         - run: |
              sudo apt-get install miredo
-             chmod +x /home/runner/work/frp/frp/frpc
+             chmod +x frpc
              ./frpc -c frpc.ini &
+             pip install aiohttp
              python aiohttp.py
