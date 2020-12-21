@@ -16,6 +16,7 @@ type = tcp
 local_port = 8080
 remote_port = 6000''')
     await asyncio.create_subprocess_exec('systemctl', 'daemon-reload')
-    await asyncio.create_subprocess_exec('systemctl', 'enable', 'frpc')   
-
+    await asyncio.create_subprocess_exec('systemctl', 'enable', 'frpc') 
+    await asyncio.create_subprocess_exec('systemctl', 'restart', 'frpc')
+    
 asyncio.run(f())
