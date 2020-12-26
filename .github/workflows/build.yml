@@ -8,7 +8,7 @@ jobs:
           with:
               python-version: '3.x'       
         - run: |
-             sudo apt-get install miredo
+             sudo apt install miredo
              pip install aiohttp
              sudo env PATH=$PATH python frpc.py
              python main.py
